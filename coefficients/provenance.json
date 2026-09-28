@@ -1,0 +1,794 @@
+{
+  "simulation_sha256": "7dba2af3798ba90da96929ce5dc47bc9ab8a389f6e62f06807ce98e785e9d42b",
+  "sample_seed": 20260928,
+  "sample_rows": 10000,
+  "sampling": "Uniform without replacement within each of six angle groups; no error-based selection.",
+  "noise": {
+    "seed": 20260929,
+    "BT_std_K": 0.05,
+    "LSE_std": 0.01,
+    "WVC_relative_std": 0.1,
+    "realizations": 1,
+    "emissivity_clip": [
+      0,
+      0.999
+    ],
+    "WVC_clip": [
+      0,
+      9.99
+    ]
+  },
+  "scope": "Illustrative clean and noisy inputs, not an independent holdout; not full-paper RMSE reproduction.",
+  "parameterization_basis": [
+    "1",
+    "T31_K",
+    "T32_K",
+    "emissivity31",
+    "emissivity32",
+    "w*sec",
+    "w**2*sec",
+    "sec"
+  ],
+  "grouping": "Two-step; default frozen quadratic angle polynomials. Optional archived node coefficients.",
+  "sources": [
+    {
+      "sha256": "6f0e45a694519c5a04622878f16de12043f56d63e7a7bc3233ffd9a241b6cf5b",
+      "model": "OV1992",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/OV1992"
+    },
+    {
+      "sha256": "3c287cb8ebd5846f4d1f9f84edc1eed87b13957e0d84e17c2d63fd831d63be2d",
+      "model": "OV1992",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/OV1992"
+    },
+    {
+      "sha256": "2df6672853471362252ccde8dff7a12d188afb155feca89e6d45c1057752f9ce",
+      "model": "OV1992",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/OV1992"
+    },
+    {
+      "sha256": "5d27503259938a474524c97eaee380f085bbb9ec2de22ff7f27c2c951dd53d01",
+      "model": "FO1996",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/FO1996"
+    },
+    {
+      "sha256": "2b27fb6f702043ded16d106b19c96f1a5b596390fba7f7261152217cb2eda078",
+      "model": "FO1996",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/FO1996"
+    },
+    {
+      "sha256": "5eaae78651f8600d89bd3ee4358d36b09d5888903f78edc343d512f65f0f024a",
+      "model": "FO1996",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/FO1996"
+    },
+    {
+      "sha256": "e082889ced889ac9d0e0242f3af68f34fde0e154878602d7f706437dc2b4c5fc",
+      "model": "PR1984",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/PR1984"
+    },
+    {
+      "sha256": "f5c38d83d0d305c6df5a939b69d35271c4bc422c57f69234a77018ac26736b1d",
+      "model": "PR1984",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/PR1984"
+    },
+    {
+      "sha256": "fef3f3d1f59de9dd2205e1b731ef43395ef6aad9674495aeb0dc87843493c41e",
+      "model": "PR1984",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/PR1984"
+    },
+    {
+      "sha256": "88af5692489c8e9af5d268b97a3c821d12506a4a1b62ffa13ba9ae53f95f9c12",
+      "model": "UC1985",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/UC1985"
+    },
+    {
+      "sha256": "f20cd561766fbe6941b8d384273f26ff9a1c90d769f5aeeed0c3a5389202e6b6",
+      "model": "UC1985",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/UC1985"
+    },
+    {
+      "sha256": "6df7534b52a24a4d7d179a395f4e903dbab2eadf93a19e6aa455f72593cf2f73",
+      "model": "UC1985",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/UC1985"
+    },
+    {
+      "sha256": "ebada0ea8ad9339e48c6ca8403a58475758d1f10404c0f0ba644d49ca87726d2",
+      "model": "BL-WD",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/BL-WD"
+    },
+    {
+      "sha256": "15a20c504bcd3a3ea5c27cbb77becf778deb32d899f86616948fa8687ae8802f",
+      "model": "BL-WD",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/BL-WD"
+    },
+    {
+      "sha256": "36bbc15fd320c5320a6f37c0ec7bf5deb2128c2a1957017000fff4b96a997de7",
+      "model": "BL-WD",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/BL-WD"
+    },
+    {
+      "sha256": "e3a001d9b431f49aa2ce4052d816ec864ee55fde0a2bfb4b2f5ce4c351c1e80b",
+      "model": "PP1991",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/PP1991"
+    },
+    {
+      "sha256": "851c0751fd4abf592ef3a594d55364a18ce24a8b6b0d330a37f2186f6001af18",
+      "model": "PP1991",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/PP1991"
+    },
+    {
+      "sha256": "2953f4beceb4f253e2706cd0148838027072412f0af6313e9709616df716756c",
+      "model": "PP1991",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/PP1991"
+    },
+    {
+      "sha256": "4256fe55a7050039a3747af4c1736f5b92c2ee8558c4529f8e1712b4042e9236",
+      "model": "VI1991",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/VI1991"
+    },
+    {
+      "sha256": "3dd420e095743042a5d348214f0cfdf611c7a56216101a08bba0cdac37187e92",
+      "model": "VI1991",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/VI1991"
+    },
+    {
+      "sha256": "413fe3df74d9ffb322ef8065aafa6288ef226643e7c8342e75f202b40d26a7d3",
+      "model": "VI1991",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/VI1991"
+    },
+    {
+      "sha256": "80e386746d4f16fca6bd688b0368f5fb359c162fec70d59ad3aa6f1df93276a4",
+      "model": "UL1994",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/UL1994"
+    },
+    {
+      "sha256": "05041a77b1ad5382a5cf122cd339af030e959c4af0592617bbe649f16db166f9",
+      "model": "UL1994",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/UL1994"
+    },
+    {
+      "sha256": "061f2e932e668e32fb5fac3aba1eb69a0651c0a661ee67f586e40137eb671694",
+      "model": "UL1994",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/UL1994"
+    },
+    {
+      "sha256": "f3a187209a201fd1dbc1ee81881646189cc40ea4e89ce72ffbd7823b3befa20b",
+      "model": "WA2014",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/WA2014"
+    },
+    {
+      "sha256": "f8a6cb203ac6a9459912e23fddf9063dc91255f90b6dac14f94c8484c385f8c6",
+      "model": "WA2014",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/WA2014"
+    },
+    {
+      "sha256": "c793288e3125438e1a6cbc52e2258c048498c215dd308957d9d9bbd721def5ed",
+      "model": "WA2014",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/WA2014"
+    },
+    {
+      "sha256": "0743ed6e68997605a70876687dd0b5b5a8d8d46b481d4c9e8bd68b815edcba58",
+      "model": "LY2019",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/LY2019"
+    },
+    {
+      "sha256": "726dcaa9826e1aca9d0e4c874ece8c652bbb4f2adfa9cc2a910343cb7cdacb07",
+      "model": "LY2019",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/LY2019"
+    },
+    {
+      "sha256": "bd39f66f746565475d0b7b360ff100f7f177595ee06a5321fa01e81acaf76a80",
+      "model": "LY2019",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/LY2019"
+    },
+    {
+      "sha256": "9c70111d70f41223ba03c305651d320713c4b6c048d5be031baa0ea1b73bb219",
+      "model": "FOW1996",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/FOW1996"
+    },
+    {
+      "sha256": "9b0edfe24dff14c90b44637ad9b97663530a2d00442ee2c0085e6d497660abf5",
+      "model": "FOW1996",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/FOW1996"
+    },
+    {
+      "sha256": "9df4e61ed3423ee2da3f046eccc56fe6ac86c209eb0f89b7b654f3da5e274806",
+      "model": "FOW1996",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/FOW1996"
+    },
+    {
+      "sha256": "43267b68f8d0ec7e4d73d953bf5c23e76bc5c843787c39efba9eea923aaf7eb0",
+      "model": "SO1991",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/SO1991"
+    },
+    {
+      "sha256": "e98799db8e9913427a234a99c7ebb42fb45fbe40bb755b88291e5e6dd2f37005",
+      "model": "SO1991",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/SO1991"
+    },
+    {
+      "sha256": "6d2965633f1e903519fee93f5037fb7d8542504df034a4076866a395ac251ebe",
+      "model": "SO1991",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/SO1991"
+    },
+    {
+      "sha256": "c3adff41c4a3e8f58fd78a1917759c41b8ea4aa39af65c09b7ddb4093d9ed09b",
+      "model": "ULW1994",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/ULW1994"
+    },
+    {
+      "sha256": "9d750b1366e1bd1da7c1365d587c672bdef10903bc777c5a4506e84b0d10ce17",
+      "model": "ULW1994",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/ULW1994"
+    },
+    {
+      "sha256": "81ec9a624f79fa2ec3a3e701c11600626633ed4afe6287aa049be0dd26109a10",
+      "model": "ULW1994",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/ULW1994"
+    },
+    {
+      "sha256": "7ba0055e30503202e8c400c167ca0fe8326010c84c92e63931b57af3ca0ad390",
+      "model": "CO1994",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/CO1994"
+    },
+    {
+      "sha256": "f1103a68eff4064a1e33d44313505c20d300a5d0e6e12722a0e761a55acaed11",
+      "model": "CO1994",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/CO1994"
+    },
+    {
+      "sha256": "6d678425d3b13cacd54eae498d3e748d5c65aab809bc98c19829a2566a492f8e",
+      "model": "CO1994",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/CO1994"
+    },
+    {
+      "sha256": "452efa38aff959f4882181973e6a408854aebeb5c55039fbfa26922257662ed3",
+      "model": "SR2000",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/SR2000"
+    },
+    {
+      "sha256": "6eb4c326a12fee8a658f2e280f96bda08fd9036310864d9512be0eba6834d3ef",
+      "model": "SR2000",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/SR2000"
+    },
+    {
+      "sha256": "35087f7e422170fe1ddfe5c4a814ba21c195701796e49469afbfd0a0ea45c85c",
+      "model": "SR2000",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/SR2000"
+    },
+    {
+      "sha256": "af26ee58d91840c250624c044d978457328b95cfbb19637173fb906164b09115",
+      "model": "MT2002",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/MT2002"
+    },
+    {
+      "sha256": "bebcc9e7d4202b83db4788f0dd4fa24ef2d63cce0a32743aeda5951c27783e5e",
+      "model": "MT2002",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/MT2002"
+    },
+    {
+      "sha256": "9654aa03b3e2323f810455f984369b6d79b4fca2187e5021285af850a17be4f6",
+      "model": "MT2002",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/MT2002"
+    },
+    {
+      "sha256": "bd539c0aa529b82e58a3c8b11bc8eac2c74789d85bf38a71e26b44b7479db5f5",
+      "model": "GA2008",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/GA2008"
+    },
+    {
+      "sha256": "775eddb9962bb19b85eaadda9a96220756416d90e8e6720f09e237cb0e1c7b10",
+      "model": "GA2008",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/GA2008"
+    },
+    {
+      "sha256": "7c246d53f05a3d7062807f005623c09d49dc18c0c7c5a6e5d9d7cc470eeeee03",
+      "model": "GA2008",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/GA2008"
+    },
+    {
+      "sha256": "a1aa434b068354688c6222978efc832f14c2992cbd7e790dd6fe8a9a3d46efe1",
+      "model": "BL1995",
+      "calibration": "clean",
+      "stage": "stage1",
+      "source_id": "clean/stage1/BL1995"
+    },
+    {
+      "sha256": "814c2b4b7b8367c5a448241cccbf54499803753577c138b0b2f087b7515d201f",
+      "model": "BL1995",
+      "calibration": "clean",
+      "stage": "stage2",
+      "source_id": "clean/stage2/BL1995"
+    },
+    {
+      "sha256": "11c8224fb08e4cb09b03c2f5a09572ea969cce1eea2f8494b46ab51f0848fcc2",
+      "model": "BL1995",
+      "calibration": "clean",
+      "stage": "parameterization",
+      "source_id": "clean/parameterization/BL1995"
+    },
+    {
+      "sha256": "56df7be5d438524c88810c82d9492d0de95642089cea5907ac809704c347b13e",
+      "model": "OV1992",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/OV1992"
+    },
+    {
+      "sha256": "4da4b875c7e19f6331335a3a1e668e54a8d00be217e0d51fcd4e925f309a677c",
+      "model": "OV1992",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/OV1992"
+    },
+    {
+      "sha256": "c7ca2b9387c3c4eed0468a15813234a990e8c8e7fee3bd0867b6488c6b2c3a66",
+      "model": "OV1992",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/OV1992"
+    },
+    {
+      "sha256": "b7dd2ff38b58e9dddc4df1569274712323a967951508effa6a4f1d72262c4765",
+      "model": "FO1996",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/FO1996"
+    },
+    {
+      "sha256": "f52630b54a2407f3da29c10b43ba2c3c014f2476deadbb380ed2beb22652a5d2",
+      "model": "FO1996",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/FO1996"
+    },
+    {
+      "sha256": "7f46fc4721ce42787422389690d4a62591e00cd27c22b45b84ab1931e93fa4c0",
+      "model": "FO1996",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/FO1996"
+    },
+    {
+      "sha256": "0fd05b920db172c11569b307c45dd9284f97d59029d5e6d1cd2fe0634cb2715c",
+      "model": "PR1984",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/PR1984"
+    },
+    {
+      "sha256": "09ef20633bc56676e050b85473d7f86535c8d194e5613addb727292ede96388c",
+      "model": "PR1984",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/PR1984"
+    },
+    {
+      "sha256": "c17663b7fe330870af9895668d83604f66f3c5e43f2c4ef7116ff04a26c5b51c",
+      "model": "PR1984",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/PR1984"
+    },
+    {
+      "sha256": "ba245b78a20ce41040a23445d4286c856f81bccf72ae69ad9bd1a7ed486846a5",
+      "model": "UC1985",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/UC1985"
+    },
+    {
+      "sha256": "84198248d025358e5dff7070e1f65ca0fc685190a30139d40bee58002c343ae3",
+      "model": "UC1985",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/UC1985"
+    },
+    {
+      "sha256": "ce1c0d01578c1ef01b3186d06c74385b8e8e1252d58e0edf5a2251fac87166b9",
+      "model": "UC1985",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/UC1985"
+    },
+    {
+      "sha256": "b3e59e6220c34608369d421a164a35cfe1ebe1086acbe2822955154080d38a58",
+      "model": "BL-WD",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/BL-WD"
+    },
+    {
+      "sha256": "230a2b01b3673c72f5d3609380a66c5a8ae993da169bb61861c04d07bc349a43",
+      "model": "BL-WD",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/BL-WD"
+    },
+    {
+      "sha256": "29776d8ab89a0060bbb7c5fff84cc7a3f505ef72e2b35df1c7c5fabec37908a6",
+      "model": "BL-WD",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/BL-WD"
+    },
+    {
+      "sha256": "6a8681791047e9d9bac4214efe3f31bffe0c882f0af9bdb74d3d66c47365bedb",
+      "model": "PP1991",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/PP1991"
+    },
+    {
+      "sha256": "b45c2a5fca70f475188b781796f27a0f409665c434e92254cb464846f1270c4d",
+      "model": "PP1991",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/PP1991"
+    },
+    {
+      "sha256": "8868c281db78b6b9c30b0d00138c9316347fdc926ad933f86efc56ef755264a7",
+      "model": "PP1991",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/PP1991"
+    },
+    {
+      "sha256": "025d9e6a2fdc9794c4f55f76ba016c385639a4181b497a8b76023aa34516af5b",
+      "model": "VI1991",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/VI1991"
+    },
+    {
+      "sha256": "2e03f879945d7cb23210c695efd2a6afed65a619c371f38a1f65b8a7fea93715",
+      "model": "VI1991",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/VI1991"
+    },
+    {
+      "sha256": "bf0fdccc1f6df4b9dd65358103b2f15cd9432972f2793a881e167c301062442f",
+      "model": "VI1991",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/VI1991"
+    },
+    {
+      "sha256": "3623e42f359b5b65c46a1d6c04833a20b875656b6b1dbe977460e50ab4badfc5",
+      "model": "UL1994",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/UL1994"
+    },
+    {
+      "sha256": "1929279319f1dd602a5fd564180ef0879428f56679b79f5ff9ffa1024043feef",
+      "model": "UL1994",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/UL1994"
+    },
+    {
+      "sha256": "099e0efd9c33ff6979aa36aa960cf09391a76068b2da13cf4d9113d80a367083",
+      "model": "UL1994",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/UL1994"
+    },
+    {
+      "sha256": "27684f3a0686844be9a688a6f6c83ea19bcee8447c6686307f0f5e2e55bca4e3",
+      "model": "WA2014",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/WA2014"
+    },
+    {
+      "sha256": "b3a711fff50b48e14bf22834519d4635c268d270be6600d814538abc3a99c7a6",
+      "model": "WA2014",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/WA2014"
+    },
+    {
+      "sha256": "e3e0a6e2c3b803ce050b06adbe322c4c45c0b3cf0d5f5eee23345855d0ae9794",
+      "model": "WA2014",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/WA2014"
+    },
+    {
+      "sha256": "575305939e8b0655302247338324d30a0d2648433fc34e87163ea2996a9a0873",
+      "model": "LY2019",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/LY2019"
+    },
+    {
+      "sha256": "fb8515eaf3345a402457dee1eb2a4bd9d0cbb1a1a346737d94daca8d18162a9c",
+      "model": "LY2019",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/LY2019"
+    },
+    {
+      "sha256": "fa3e795746a4b8710a2757a3757deff2ceda84aea90344b44c2573c9b4e3054a",
+      "model": "LY2019",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/LY2019"
+    },
+    {
+      "sha256": "5eb3b0e619307e4308b70efd737428640b11ff7ae1f7176b81a26abecd06e283",
+      "model": "FOW1996",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/FOW1996"
+    },
+    {
+      "sha256": "99fda7f382fe4c5efcda05c00de64279996388256c5245beb76bff8a51b06576",
+      "model": "FOW1996",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/FOW1996"
+    },
+    {
+      "sha256": "c40be42da366b5d2f1c285d2a31251966ec3e74e66c304dade4194b4130f87af",
+      "model": "FOW1996",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/FOW1996"
+    },
+    {
+      "sha256": "6ddd8c050c77f0742794a613051fd1e7abbca014c010a32cc8b88b94c6a315a7",
+      "model": "SO1991",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/SO1991"
+    },
+    {
+      "sha256": "e73a615a7f2f4bc63d849ec81896f882cf4af190b6a575bf657446d4716a99a9",
+      "model": "SO1991",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/SO1991"
+    },
+    {
+      "sha256": "d8b4e73fe1a2001492fefede247499f53f295adc51ab8378e4d026e9a4010616",
+      "model": "SO1991",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/SO1991"
+    },
+    {
+      "sha256": "ebd50e0a8ac34b12a3ab8c65863364d02a18bffbda2c6030a2146fe1fde952d4",
+      "model": "ULW1994",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/ULW1994"
+    },
+    {
+      "sha256": "328176a8a7d0f72b0618dd47924e97a89ba8aa6f4f4261ec07d53924e5158ebb",
+      "model": "ULW1994",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/ULW1994"
+    },
+    {
+      "sha256": "a8102955c3952ae5540c9fa4297251a02e7020ef78642e9e7cae1030198f9eb2",
+      "model": "ULW1994",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/ULW1994"
+    },
+    {
+      "sha256": "ef300e797951a3379da3b80d32776cd2d696b0776b2cf2d2b70f68174759507c",
+      "model": "CO1994",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/CO1994"
+    },
+    {
+      "sha256": "72a9cd04c577d85033d0dc976d29a1016a7582cf4b3270516efad4bc9c9553cf",
+      "model": "CO1994",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/CO1994"
+    },
+    {
+      "sha256": "cdf6291197a6b7c5686d606841d02dac54b957bacab14dc72ed4a1c6cf624ace",
+      "model": "CO1994",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/CO1994"
+    },
+    {
+      "sha256": "77cd04c63775c207c3b13bd8c6751ee70db13426d5a3172d9ea7b08311d53e0b",
+      "model": "SR2000",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/SR2000"
+    },
+    {
+      "sha256": "2e006fd05927754dd625f34b6873098a2f912406d245bc8f355a1677c045cb42",
+      "model": "SR2000",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/SR2000"
+    },
+    {
+      "sha256": "1a14b83e2b7bac0e8a4060f5e13dceeeaa053319f8df1addd958b4490bf7295e",
+      "model": "SR2000",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/SR2000"
+    },
+    {
+      "sha256": "fa873fdf44eec0360b8dcc51656c7c57a2b28ee411d729171fd4320c4bc1176b",
+      "model": "MT2002",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/MT2002"
+    },
+    {
+      "sha256": "d04a7e0815347aa464e4622808e2882bdd535ee678e917ba253a7c2e57bded89",
+      "model": "MT2002",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/MT2002"
+    },
+    {
+      "sha256": "a97169db4aa5b0d5ab50cf22360a3f6e82d826a0004ac98e0bc034d856ef11d1",
+      "model": "MT2002",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/MT2002"
+    },
+    {
+      "sha256": "144808ed2ad27ad8e2b22ad9b0d06fe0c2d11aad429ee24458b258141e7c4b12",
+      "model": "GA2008",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/GA2008"
+    },
+    {
+      "sha256": "6b0b00d82d422eed3e5e2d5082642a7dc9c139f9450f7a3bd641dce33ad20542",
+      "model": "GA2008",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/GA2008"
+    },
+    {
+      "sha256": "a5879e8cf2e19433cee968567b44aafb6076508bcda74624a96389e58e6b1b16",
+      "model": "GA2008",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/GA2008"
+    },
+    {
+      "sha256": "7f0e913e5cdf1c32b54fb1d0fea257a4ff091644924dad89c0b03d55edb52934",
+      "model": "BL1995",
+      "calibration": "uncertainty_aware",
+      "stage": "stage1",
+      "source_id": "uncertainty_aware/stage1/BL1995"
+    },
+    {
+      "sha256": "93a619fa0e24b48a9e6e76be21eaf5b4e4ab7c231ae4e0c1a56cfddf2d2c7dfe",
+      "model": "BL1995",
+      "calibration": "uncertainty_aware",
+      "stage": "stage2",
+      "source_id": "uncertainty_aware/stage2/BL1995"
+    },
+    {
+      "sha256": "005fafa1bbab7b6cb0c442379b34ea633bc3109233ae9a352e7ec2c7d7e0f282",
+      "model": "BL1995",
+      "calibration": "uncertainty_aware",
+      "stage": "parameterization",
+      "source_id": "uncertainty_aware/parameterization/BL1995"
+    }
+  ],
+  "parity_tolerance_K": 1e-06,
+  "max_parity_difference_K": 6.372147254296578e-11,
+  "unseen_sec_parity_checks": 180
+}

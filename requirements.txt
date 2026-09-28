@@ -1,0 +1,8 @@
+# Prediction requires only NumPy. Remaining packages run the demonstration.
+numpy==1.26.4
+pandas==2.3.1
+matplotlib==3.9.4
+nbformat>=5.9,<6
+nbclient>=0.8,<1
+ipykernel>=6,<7
+notebook>=7,<8
